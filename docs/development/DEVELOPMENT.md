@@ -24,14 +24,20 @@ Use a reproducible dependency definition, pin important production dependencies,
 Separate configuration from source. Never commit secrets. Validate configuration at startup.
 
 ## Implementation Order
+
 1. Configuration and domain types
-2. Ollama provider abstraction
-3. Bounded orchestrator loop
-4. Tool registry and validation
+2. Ollama provider abstraction (local models)
+3. Agent/orchestrator loop
+4. Tool registry
 5. Permission engine
-6. Read-only filesystem/Git tools
-7. Context retrieval
-8. SQLite memory
-9. Structured logging/metrics
-10. CLI
-11. Tests and hardening before additional write/execution tools
+6. list_files
+7. read_file
+8. search_files
+9. git_status
+10. git_diff
+11. Context retrieval
+12. SQLite memory
+13. Structured logging
+14. CLI
+15. Additional tools
+16. Tests and hardening 
